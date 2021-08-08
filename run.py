@@ -6,6 +6,15 @@ def extract(page):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36'}
     url = f'https://ie.indeed.com/jobs?q=python&l=dublin&start={page}'
     r = requests.get(url, headers)
-    return r.status_code
+    content = BeautifulSoup(r.content, 'html.parser')
+    return content
 
-print(extract(0))
+
+def transform(content):
+    divs = content.find_all('div', class_='slider_container')
+    return len(divs)
+
+
+content = extract(0)
+print(transform(content))
+
