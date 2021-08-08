@@ -1,6 +1,7 @@
 # import modules
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
 
 
 # Extrct Function to Scrape the website
@@ -38,7 +39,11 @@ def transform(content):
 
 
 joblist = []
-content = extract(0)
-transform(content)
-print(joblist)
+# For loop to loop through pages
+for i in range(0, 40, 10):
+    content = extract(0)
+    transform(content)
+
+print(len(joblist))
+
 
