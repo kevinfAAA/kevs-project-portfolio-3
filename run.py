@@ -15,7 +15,11 @@ def transform(content):
     for item in divs:
         title = item.find('h2').text.strip()
         company = item.find('span', class_='companyName').text.strip()
-        print(company)
+        try:
+            salary = item.find('span', class_='salary-snippet').text.strip()
+        except:
+            salary = ''
+        print(salary)
     return
 
 
