@@ -19,7 +19,8 @@ def transform(content):
             salary = item.find('span', class_='salary-snippet').text.strip()
         except:
             salary = ''
-        print(salary)
+        summary = item.find('div', class_='job-snippet').text.strip()
+        print(summary)
     return
 
 
