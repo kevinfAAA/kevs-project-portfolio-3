@@ -12,9 +12,13 @@ def extract(page):
 
 def transform(content):
     divs = content.find_all('div', class_='slider_container')
-    return len(divs)
+    for item in divs:
+        title = item.find('h2').text.strip()
+        print(title)
+    return
 
 
 content = extract(0)
-print(transform(content))
+transform(content)
+
 
