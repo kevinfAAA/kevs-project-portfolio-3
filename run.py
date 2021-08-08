@@ -14,7 +14,8 @@ def transform(content):
     divs = content.find_all('div', class_='slider_container')
     for item in divs:
         title = item.find('h2').text.strip()
-        print(title)
+        company = item.find('span', class_='companyName').text.strip()
+        print(company)
     return
 
 
