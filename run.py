@@ -39,13 +39,13 @@ def transform(content):
 
 
 joblist = []
-# For loop to loop through the first three pages in  a step of ten
+# For loop to loop through the first three pages in a step of ten
 for i in range(0, 40, 10):
+    print(f'Getting page {i} ')
     content = extract(0)
     transform(content)
 
+# Panda dataframe sends the scraped data to the jobs csv file
 df = pd.DataFrame(joblist)
 print(df.head())
 df.to_csv('jobs.csv')
-
-
