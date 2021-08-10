@@ -1,45 +1,42 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# INDEED WEB SCRAPER
 
-Welcome kevinfAAA,
+## Description: Code Institute Student Project 3: 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+A program that successfully scrapes job information from the indeed.com website 
+It showcases my python ability.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Indeed Web Scraping Program](PUT-IN-AM-IMAGE-OF-THE-PROGRAM-HERE!!!!!!!!!!!!!)
 
-`python3 -m http.server`
+# Table of Contents
+- [1. Introduction](#introduction)
+- [2. How to use](#How-to-use)
+- [3. Testing](#testing)
+- [4. Bugs](#bugs)
+- [5. Future Updates](#future-updates)
+- [6. Contribution Links](#contribution-links)
+- [7. Deployment](#deployment)
+- [8. Wireframe](#wireframe)
+- [9. Walk Through](#Walk-Through)
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+<a name="introduction"></a>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# 1. Introduction
+[Go to the top](#table-of-contents)
 
-A blue button should appear to click: *Make Public*,
+This is the first python program I have built and is part of my project portfolio required in the Full-Stack Software Development Diploma I am currently undertaking.
+The aim of this program is to scrape job information from the indeed.com website:
+- The program should allow the user to input the type of job they are looking for and the location they would like that job to be in.
+- The program should scrape the following information:
+    1. The Job Title.
+    2. The name of the Company that are hiring for the job.
+    3. The Salary being offer for the job if available.
+    4. A Summary giving a description of the role on offer.
+- The first five job heading will be sent to terminal to show that the program run successfully.
+- The program will send the the scraped data of the first five pages of the Indeed website and populate the jobs.csv file with it for analysis by the user.
 
-Another blue button should appear to click: *Open Browser*.
+<a name="How-to-use"></a>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+# 2. How to use
+[Go to the top](#table-of-contents)
