@@ -46,6 +46,7 @@ def transform(content):
     return None
 
 
+# User inputs to find specific Jobs and locations
 if __name__ == '__main__':
     print('what job are you looking for?')
     job_type = input('')
