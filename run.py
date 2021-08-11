@@ -1,7 +1,6 @@
 # import modules
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
 
 joblist = []
 
@@ -48,10 +47,10 @@ def transform(content):
 
 # User inputs to find specific Jobs and locations
 if __name__ == '__main__':
-    print('what job are you looking for?')
+    print('what job are you looking for?\n')
     job_type = input('')
 
-    print('What location are you looking for?')
+    print('What location are you looking for?\n')
     location = input('')
 
 
@@ -61,7 +60,5 @@ for i in range(0, 40, 10):
     content = extract(0)
     transform(content)
 
-# Panda dataframe sends the scraped data to the jobs csv file
-df = pd.DataFrame(joblist)
-print(df.head())
-df.to_csv('jobs.csv')
+
+print(joblist)
