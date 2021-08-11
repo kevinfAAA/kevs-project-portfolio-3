@@ -16,8 +16,6 @@ It showcases my python ability.
 - [5. Future Updates](#future-updates)
 - [6. Contribution Links](#contribution-links)
 - [7. Deployment](#deployment)
-- [8. Wireframe](#wireframe)
-- [9. Walk Through](#Walk-Through)
 
 
 <a name="introduction"></a>
@@ -40,3 +38,43 @@ The aim of this program is to scrape job information from the indeed.com website
 
 # 2. How to use
 [Go to the top](#table-of-contents)
+
+When the program is run, the user will be asked to questions:   
+
+1. what job are you looking for?
+2. Where are you looking to work?
+
+The first question asks the user to input the job they are looking for, the program then adds that input to job title section in the url. 
+<br>
+The second question asks the user to input the location they would the the job to be in, the then adds that input to the location section in the url.
+<br>
+Once the user inputs there details the program requests this information from the first five pages of the indeed.com website
+<br>
+url = 'https://ie.indeed.com/jobs?q={job_type}&l={location}&start={page}'
+<br>
+The page section in the above url requests the page which steps in 10 meaning:
+
+- Page 1 = 0
+- Page 2 = 10
+- Page 3 = 20 and so on
+
+<br>
+Once the user runs the program and makes a request, the program will scrape the requested information and output it to the terminal in an appended list.
+<br>
+The list has four headings:
+
+1. Title
+2. Company
+3. Salary
+4. Summary 
+<br>
+
+The program will return information on each of the headings accept for the Salary heading on occasions where the salary is not posted by the campany advertising.
+<br> 
+On occasions where the salary is not posted by the campny the program will still post the heading followed by "Salary not available".
+
+<a name="Testing"></a>
+
+# 3. Testing
+[Go to the top](#table-of-contents)
+

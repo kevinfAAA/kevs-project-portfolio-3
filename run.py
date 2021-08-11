@@ -31,7 +31,7 @@ def transform(content):
         try:
             salary = item.find('span', class_='salary-snippet').text.strip()
         except Exception as ex:
-            salary = ''
+            salary = 'Salary not available'
         summary = item.find('div', class_='job-snippet').text.strip()
 
 # Store content into a dictionary and append to a list
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     print('what job are you looking for?\n')
     job_type = input('')
 
-    print('What location are you looking for?\n')
+    print('Where are you looking to work?\n')
     location = input('')
 
 
