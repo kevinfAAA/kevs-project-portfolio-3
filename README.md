@@ -5,8 +5,9 @@
 A program that successfully scrapes job information from the indeed.com website 
 It showcases my python ability.
 
+A live programe can be found [here](https://kevs-project-portfolio-3.herokuapp.com/).
 
-![Indeed Web Scraping Program](PUT-IN-AM-IMAGE-OF-THE-PROGRAM-HERE!!!!!!!!!!!!!)
+![Indeed Web Scraping Program](assets/images/portfolio-3.JPG)
 
 # Table of Contents
 - [1. Introduction](#introduction)
@@ -48,7 +49,7 @@ The first question asks the user to input the job they are looking for, the prog
 <br>
 The second question asks the user to input the location they would the the job to be in, the then adds that input to the location section in the url.
 <br>
-Once the user inputs there details the program requests this information from the first five pages of the indeed.com website
+Once the user inputs there details the program requests this information from the first five pages of the indeed.ie website
 <br>
 url = 'https://ie.indeed.com/jobs?q={job_type}&l={location}&start={page}'
 <br>
@@ -73,8 +74,43 @@ The program will return information on each of the headings accept for the Salar
 <br> 
 On occasions where the salary is not posted by the campny the program will still post the heading followed by "Salary not available".
 
+## Walk Through
+
+The following is a walk through with images on how to run the program:
+
+1. Question: What job are you looking for? Answer: Python Developer, and press enter on the keyboard.
+2. Question: Where are you looking to work? Answer: Dublin
+
+![Indeed Web Scraping Program Part 1](assets/images/image-1.JPG)
+
+3. Once the user has answered the two questions and presses enter on the keyboard the program will run and output the requested information.
+
+![Indeed Web Scraping Program](assets/images/image-2.JPG)
+
 <a name="Testing"></a>
 
 # 3. Testing
 [Go to the top](#table-of-contents)
 
+
+<a name="Testing"></a>
+
+# 4. Bugs
+[Go to the top](#table-of-contents)
+
+
+
+<a name="future-updates"></a>
+
+# 5. Future Updates
+
+[Go to the top](#table-of-contents)
+
+1. Currently the program only runs on the irish indeed website, a progam that runs on there world wide, my provide a better user experience
+
+2. use the pandas module to create a dataframe and send to scrapped information to a csv for further analysis or for storage purposes with the following code:
+
+ Panda dataframe sends the scraped data to the jobs csv file
+ df = pd.DataFrame(joblist)
+ print(df.head())
+ df.to_csv('jobs.csv')
