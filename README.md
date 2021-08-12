@@ -92,8 +92,41 @@ The following is a walk through with images on how to run the program:
 # 3. Testing
 [Go to the top](#table-of-contents)
 
+## PEP8 Validation Testing 
 
-<a name="Testing"></a>
+I used the [PEP8 online](http://pep8online.com/) validator to check my code for errors:
+
+#### Errors Found:
+
+Code: E501	Line: 11	Column: 80	Error Description: line too long (139 > 79 characters)
+<br>
+Unable to fix error as this is my User-Agent string.
+
+## Manual Testing
+
+- When the program is run the user is prompted with the question "What job are you look for?". It worked as expected.
+<br>
+For testing purposes the user answered Python Developer.
+
+- When the user submits an answer to the "What job are you look for?" question, ther user is then prompted by another question "Where are looking to work?". It worked as expected.
+<br>
+For testing purposes the user answered Dublin.
+
+- When the user submits an answer to the "Where are looking to work?" question, the program will scrape the first four pages of the indeed.com website and return a list
+with four headings:
+
+1. Title
+2. Company
+3. Salary
+4. Summary 
+<br>
+
+The program will return information on each of the headings accept for the Salary heading on occasions where the salary is not posted by the campany advertising.
+<br> 
+On occasions where the salary is not posted by the campny the program will still post the heading followed by "Salary not available". It worked as expected.
+
+
+<a name="Bugs"></a>
 
 # 4. Bugs
 [Go to the top](#table-of-contents)
@@ -106,11 +139,45 @@ The following is a walk through with images on how to run the program:
 
 [Go to the top](#table-of-contents)
 
-1. Currently the program only runs on the irish indeed website, a progam that runs on there world wide, my provide a better user experience
+1. Currently the program only runs on the irish indeed website, a progam that runs on multiple country locations may provide a better user experience.
 
-2. use the pandas module to create a dataframe and send to scrapped information to a csv for further analysis or for storage purposes with the following code:
+2. By using the pandas dataframe it's possible to send the scrapped information to a csv for further analysis or to store for futher use.
+<br>
+This can be acheived by:
+ 
+   1. Installing the pandas dataframe *pip install pandas* 
+   2. Import the pandas module by writing *import pandas as pd* at the top of the run.py file underneath *from bs4 import BeautifulSoup*.
+   3. Write the following comment and code at the bottom of the run file:
+   <br>
+   *#Panda dataframe sends the scraped data to the jobs csv file*
+   <br>
+   *df = pd.DataFrame(joblist)*
+   <br>
+   *print(df.head())*
+   <br>
+   *df.to_csv('jobs.csv')*
+   <br>
+   <br>
 
- Panda dataframe sends the scraped data to the jobs csv file
- df = pd.DataFrame(joblist)
- print(df.head())
- df.to_csv('jobs.csv')
+3. Create a CSV file called "jobs" in the directory and run the program.
+<br>
+The Headings will be printed in the terminal will the data will be stored in the CSV.
+
+<a name="contribution-links"></a>
+
+# 4.	Contribution Links
+
+[Go to the top](#table-of-contents)
+
+- [Python Docs](https://www.python.org/)
+- [Python Tutor](http://www.pythontutor.com/visualize.html#mode=edit)
+- [PEP8 online](http://pep8online.com/)
+- [Real Python](https://realpython.com/beautiful-soup-web-scraper-python/)
+- [Towards Data Science](https://towardsdatascience.com/scrape-company-reviews-ratings-from-indeed-in-2-minutes-59205222d3ae)
+- [Geeks for Geeks](https://www.geeksforgeeks.org/scraping-indeed-job-data-using-python/)
+
+ <a name="deployment"></a>
+
+# 5.	Deployment
+
+[Go to the top](#table-of-contents)
