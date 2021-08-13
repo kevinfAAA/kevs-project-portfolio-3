@@ -5,7 +5,7 @@
 A program that successfully scrapes job information from the indeed.com website 
 It showcases my python ability.
 
-A live programe can be found [here](https://kevs-project-portfolio-3.herokuapp.com/).
+A live program can be found [here](https://kevs-project-portfolio-3.herokuapp.com/).
 
 ![Indeed Web Scraping Program](assets/images/portfolio-3.JPG)
 
@@ -30,30 +30,30 @@ The aim of this program is to scrape job information from the indeed.com website
 - The program should scrape the following information:
     1. The Job Title.
     2. The name of the Company that are hiring for the job.
-    3. The Salary being offer for the job if available.
+    3. The Salary being offered for the job if available.
     4. A Summary giving a description of the role on offer.
 - The first five job heading will be sent to terminal to show that the program run successfully.
-- The program will send the the scraped data of the first five pages of the Indeed website and populate the jobs.csv file with it for analysis by the user.
+- The program will send the scraped data of the first five pages of the Indeed website and populate the jobs.csv file with it for analysis by the user.
 
 <a name="How-to-use"></a>
 
 # 2. How to use
 [Go to the top](#table-of-contents)
 
-When the program is run, the user will be asked to questions:   
+When the program is run, the user will be asked two questions:   
 
 1. what job are you looking for?
 2. Where are you looking to work?
 
-The first question asks the user to input the job they are looking for, the program then adds that input to job title section in the url. 
+The first question asks the user to input the job they are looking for, the program then adds that input to job title section in the URL. 
 <br>
-The second question asks the user to input the location they would the the job to be in, the then adds that input to the location section in the url.
+The second question asks the user to input the location they would the job to be in, the then adds that input to the location section in the URL.
 <br>
-Once the user inputs there details the program requests this information from the first five pages of the indeed.ie website
+When the user inputs there details the program requests this information from the first five pages of the indeed.ie website.
 <br>
 url = 'https://ie.indeed.com/jobs?q={job_type}&l={location}&start={page}'
 <br>
-The page section in the above url requests the page which steps in 10 meaning:
+The page section in the above URL requests the page which steps in 10 meaning:
 
 - Page 1 = 0
 - Page 2 = 10
@@ -70,9 +70,9 @@ The list has four headings:
 4. Summary 
 <br>
 
-The program will return information on each of the headings accept for the Salary heading on occasions where the salary is not posted by the campany advertising.
+The program will return information on each of the headings accept for the Salary heading on occasions where the salary is not posted by the company advertising.
 <br> 
-On occasions where the salary is not posted by the campny the program will still post the heading followed by "Salary not available".
+On occasions where the salary is not posted by the company the program will still post the heading followed by "Salary not available".
 
 ## Walk Through
 
@@ -108,7 +108,7 @@ Unable to fix error as this is my User-Agent string.
 <br>
 For testing purposes the user answered Python Developer.
 
-- When the user submits an answer to the "What job are you look for?" question, ther user is then prompted by another question "Where are looking to work?". It worked as expected.
+- When the user submits an answer to the "What job are you look for?" question, the user is then prompted by another question "Where are looking to work?". It worked as expected.
 <br>
 For testing purposes the user answered Dublin.
 
@@ -121,9 +121,9 @@ with four headings:
 4. Summary 
 <br>
 
-The program will return information on each of the headings accept for the Salary heading on occasions where the salary is not posted by the campany advertising.
+The program will return information on each of the headings accept for the Salary heading on occasions where the salary is not posted by the company advertising.
 <br> 
-On occasions where the salary is not posted by the campny the program will still post the heading followed by "Salary not available". It worked as expected.
+On occasions where the salary is not posted by the company the program will still post the heading followed by "Salary not available". It worked as expected.
 
 
 <a name="Bugs"></a>
@@ -139,17 +139,17 @@ On occasions where the salary is not posted by the campny the program will still
 
 [Go to the top](#table-of-contents)
 
-1. Currently the program only runs on the irish indeed website, a progam that runs on multiple country locations may provide a better user experience.
+1. Currently the program only runs on the Irish indeed website, a program that runs on multiple country locations may provide a better user experience.
 
-2. By using the pandas dataframe it's possible to send the scrapped information to a csv for further analysis or to store for futher use.
+2. By using the pandas data frame it's possible to send the scrapped information to a CSV for further analysis or to store for future use.
 <br>
 This can be acheived by:
  
-   1. Installing the pandas dataframe *pip install pandas* 
+   1. Installing the pandas data frame *pip install pandas* 
    2. Import the pandas module by writing *import pandas as pd* at the top of the run.py file underneath *from bs4 import BeautifulSoup*.
    3. Write the following comment and code at the bottom of the run file:
    <br>
-   *#Panda dataframe sends the scraped data to the jobs csv file*
+   *#Panda dataframe sends the scraped data to the jobs CSV file*
    <br>
    *df = pd.DataFrame(joblist)*
    <br>
@@ -165,7 +165,7 @@ The Headings will be printed in the terminal will the data will be stored in the
 
 <a name="contribution-links"></a>
 
-# 4.	Contribution Links
+# 4. Contribution Links
 
 [Go to the top](#table-of-contents)
 
@@ -181,3 +181,18 @@ The Headings will be printed in the terminal will the data will be stored in the
 # 5.	Deployment
 
 [Go to the top](#table-of-contents)
+
+This program was deployed via heroku. The following steps explain the deployment process:
+
+- Update your requirements file so heroku recognises what modules are installed (What my program depends on to run).
+<br>
+  To update your requirements file type *Pip3 freeze > requirements.txt* into the terminal and your requirements file will update with your dependencies.
+
+- Open your heroku account and click "create new app"
+- Click on the setting tab and then click on the "buildpack" button.
+- Add "nodejs" and the "python" build pack and save the changes.
+- Click on the "deploy" tab and click on the GitHub button.
+- Enter your GitHub repository name and click "connect". This will link up the Heroku app to the GitHub repository code.
+- Click on the "Manual Deploy" and you will see your app being built. Once built click view and a page will open with your program on it.
+- Test to see that your program runs as it should.
+- Finally click on the "Enable Automatic Deploys" button so any new updates will update automatically when you perform a push to GitHub.
