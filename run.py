@@ -1,6 +1,7 @@
 # import modules
 import requests
 from bs4 import BeautifulSoup
+from beautifultable import BeautifulTable
 
 joblist = []
 
@@ -84,11 +85,18 @@ if __name__ == "__main__":
 
         print("")
         print("Summary:")
+        # initialise pretty table
+        table = BeautifulTable()
         for job in joblist:
-            print("Title:", job.get("title"))
-            print("Company:", job.get("company"))
-            print("Salary:", job.get("salary"))
-            print("")
+            # Insert table rows        
+            table.rows.append([
+                job.get("title"), 
+                job.get("company"), 
+                job.get("salary")
+            ])
+            
+        table.columns.header = ["Title", "Company", "Salary"]
+        print(table)
 
         print("")
         print("See above for full iterable list!")
