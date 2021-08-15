@@ -169,7 +169,7 @@ The Headings will be printed in the terminal will the data will be stored in the
 
 <a name="contribution-links"></a>
 
-# 4. Contribution Links
+# 6. Contribution Links
 
 [Go to the top](#table-of-contents)
 
@@ -182,7 +182,7 @@ The Headings will be printed in the terminal will the data will be stored in the
 
  <a name="deployment"></a>
 
-# 5.	Deployment
+# 7.	Deployment
 
 [Go to the top](#table-of-contents)
 
