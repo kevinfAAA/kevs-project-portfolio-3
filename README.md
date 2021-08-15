@@ -134,8 +134,7 @@ On occasions where the salary is not posted by the company the program will stil
 - In the transform function, the except statement was throwing up an error saying *except* cannot be left bare. I then changed it to *except Exception as ex* which fixed the issue.
 - The User Agent URL in the extract function is throwing up an error saying the line is too long, I cannot resolve this issue.
 - When I first deployed my program to Heroku it would not run as the requests module did not load into the requiremnts table when I ran *Pip3 freeze > requirements.txt*.
-<br>
-I added the requests module manually and deployed the program succesfully. 
+I added the requests module manually to the requirements file and deployed the program succesfully. 
 
 
 <a name="future-updates"></a>
