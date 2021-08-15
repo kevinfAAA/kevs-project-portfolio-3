@@ -131,6 +131,11 @@ On occasions where the salary is not posted by the company the program will stil
 # 4. Bugs
 [Go to the top](#table-of-contents)
 
+- In the transform function, the except statement was throwing up an error saying *except* cannot be left bare. I then changed it to *except Exception as ex* which fixed the issue.
+- The User Agent URL in the extract function is throwing up an error saying the line is too long, I cannot resolve this issue.
+- When I first deployed my program to Heroku it would not run as the requests module did not load into the requiremnts table when I ran *Pip3 freeze > requirements.txt*.
+<br>
+I added the requests module manually and deployed the program succesfully. 
 
 
 <a name="future-updates"></a>
@@ -182,13 +187,13 @@ The Headings will be printed in the terminal will the data will be stored in the
 
 [Go to the top](#table-of-contents)
 
-This program was deployed via heroku. The following steps explain the deployment process:
+This program was deployed via Heroku. The following steps explain the deployment process:
 
-- Update your requirements file so heroku recognises what modules are installed (What my program depends on to run).
+- Update your requirements file so Heroku recognises what modules are installed (What my program depends on to run).
 <br>
   To update your requirements file type *Pip3 freeze > requirements.txt* into the terminal and your requirements file will update with your dependencies.
 
-- Open your heroku account and click "create new app"
+- Open your Heroku account and click "create new app"
 - Click on the setting tab and then click on the "buildpack" button.
 - Add "nodejs" and the "python" build pack and save the changes.
 - Click on the "deploy" tab and click on the GitHub button.
