@@ -100,11 +100,22 @@ The following is a walk through with images on how to run the program:
 1. Question: What job are you looking for? Answer: Python Developer, and press enter on the keyboard.
 2. Question: Where are you looking to work? Answer: Dublin
 
-![Indeed Web Scraping Program Part 1](assets/images/image-1.JPG)
+![Indeed Web Scraping Program](assets/images/image-1.JPG)
 
-3. Once the user has answered the two questions and presses enter on the keyboard the program will run and output the requested information.
+3. Once the user has answered the two questions and presses enter on the keyboard, the program will run and output the requested information.
+<br>
+The iterable is first loaded.
 
 ![Indeed Web Scraping Program](assets/images/image-2.JPG)
+
+4. Followed by the summary table with the headings "Title", "Company" and "Salary".
+
+![Indeed Web Scraping Program](assets/images/image-3.JPG)
+![Indeed Web Scraping Program](assets/images/image-4.JPG)
+
+5. If the user enters a location outside of Ireland, the programe outputs the following: 
+
+![Indeed Web Scraping Program](assets/images/image-5.JPG)
 
 <a name="Data-Model-and-Technologies"></a>
 
