@@ -131,8 +131,7 @@ This is achieved with the help of the following modules:
 - Beautiful Soup
 - Beautiful table
 - Pandas
-<br>
-<br>
+
 
 ### 1. Requests:
 The requests module allows you to send HTTP requests using Python.
