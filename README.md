@@ -254,7 +254,6 @@ This can be acheived by:
    <br>
 
 3. Create a CSV file called "jobs" in the directory and run the program.
-<br>
 The Headings will be printed in the terminal while the data will be stored in the CSV.
 
 <a name="contribution-links"></a>
