@@ -12,11 +12,13 @@ A live program can be found [here](https://kevs-project-portfolio-3.herokuapp.co
 # Table of Contents
 - [1. Introduction](#introduction)
 - [2. How to use](#How-to-use)
-- [3. Testing](#testing)
-- [4. Bugs](#bugs)
-- [5. Future Updates](#future-updates)
-- [6. Contribution Links](#contribution-links)
-- [7. Deployment](#deployment)
+- [3. Data Model and Technologies](#Data-Model-and-Technologies)
+- [4. Testing](#testing)
+- [5. Bugs](#bugs)
+- [6. Future Updates](#future-updates)
+- [7. Contribution Links](#contribution-links)
+- [8. Deployment](#deployment)
+- [9. Flow Diagram](#Flow-Diagram)
 
 
 <a name="introduction"></a>
@@ -39,7 +41,7 @@ The aim of this program is to scrape job information from the indeed.com website
 
 The pupose of this webscraper is to allow the user to have quick accessability to job data for a specific job type in Ireland.
 <br>
-It allows to user to group the "Title", "Company" and "Salary" in a summary table for anlized.
+It allows to user to group the "Title", "Company" and "Salary" in a summary table to be further analysed.
 <br>
 This webscraper would be benefical for the recruitment industry and job seekers as it outputs useful data with reletive speed.
 
@@ -104,9 +106,46 @@ The following is a walk through with images on how to run the program:
 
 ![Indeed Web Scraping Program](assets/images/image-2.JPG)
 
+<a name="Data-Model-and-Technologies"></a>
+
+# 3. Data Model and Technologies
+[Go to the top](#table-of-contents)
+
+The Data model used here in this program is displaying an object as an array.
+<br>
+The program runs a function that loops through each "div", "h2" and "span" tag that we want to scrape on the indeed website to pull out the respective information.
+<br>
+This is achieved with the help of the following modules:
+
+- Requests
+- Beautiful Soup
+- Beautiful table
+- Pandas
+<br>
+<br>
+1. Requests:
+<br>
+The requests module allows you to send HTTP requests using Python.
+<br>
+The HTTP request returns a Response Object with all the response data (content, encoding, status, etc).
+
+2. Beautiful Soup:
+<br>
+Beautiful Soup is a Python library that is used for web scraping purposes to pull the data out of HTML and XML files. 
+<br>
+It creates a parse tree from page source code that can be used to extract data in a hierarchical and more readable manner.
+
+3. Beautiful table:
+<br>
+This Package provides BeautifulTable class for easily printing tabular data in a visually appealing format to a terminal.
+
+4. Pandas:
+<br>
+Pandas is a software library written for the Python programming language for data manipulation and analysis. It is open source package. It is built on top of another package named Numpy, which provides support for multi-dimensional arrays.
+
 <a name="Testing"></a>
 
-# 3. Testing
+# 4. Testing
 [Go to the top](#table-of-contents)
 
 ## PEP8 Validation Testing 
@@ -150,7 +189,7 @@ On occasions where the salary is not posted by the company the program will stil
 
 <a name="Bugs"></a>
 
-# 4. Bugs
+# 5. Bugs
 [Go to the top](#table-of-contents)
 
 - In the transform function, the except statement was throwing up an error saying ```except``` cannot be left bare. I then changed it to ```except Exception as ex``` which fixed the issue.
@@ -174,7 +213,7 @@ I added the requests module manually to the requirements file and deployed the p
 
 <a name="future-updates"></a>
 
-# 5. Future Updates
+# 6. Future Updates
 
 [Go to the top](#table-of-contents)
 
@@ -206,7 +245,7 @@ The Headings will be printed in the terminal while the data will be stored in th
 
 <a name="contribution-links"></a>
 
-# 6. Contribution Links
+# 7. Contribution Links
 
 [Go to the top](#table-of-contents)
 
@@ -219,7 +258,7 @@ The Headings will be printed in the terminal while the data will be stored in th
 
  <a name="deployment"></a>
 
-# 7.	Deployment
+# 8.	Deployment
 
 [Go to the top](#table-of-contents)
 
@@ -237,3 +276,9 @@ This program was deployed via Heroku. The following steps explain the deployment
 - Click on the "Manual Deploy" and you will see your app being built. Once built click view and a page will open with your program on it.
 - Test to see that your program runs as it should.
 - Finally click on the "Enable Automatic Deploys" button so any new updates will update automatically when you perform a push to GitHub.
+
+<a name="Flow-Diagram"></a>
+
+# 6. Flow Diagram
+
+[Go to the top](#table-of-contents)
