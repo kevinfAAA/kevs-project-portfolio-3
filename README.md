@@ -134,28 +134,23 @@ This is achieved with the help of the following modules:
 <br>
 <br>
 
-1. Requests:
-<br>
+### 1. Requests:
 The requests module allows you to send HTTP requests using Python.
 <br>
 The HTTP request returns a Response Object with all the response data (content, encoding, status, etc).
-<br>
 
-2. Beautiful Soup:
-<br>
+### 2. Beautiful Soup:
 Beautiful Soup is a Python library that is used for web scraping purposes to pull the data out of HTML and XML files. 
 <br>
 It creates a parse tree from page source code that can be used to extract data in a hierarchical and more readable manner.
-<br>
 
-3. Beautiful table:
-<br>
+### 3. Beautiful table:
 This Package provides BeautifulTable class for easily printing tabular data in a visually appealing format to a terminal.
-<br>
 
-4. Pandas:
+### 4. Pandas:
+Pandas is a software library written for the Python programming language for data manipulation and analysis. It is an open source package. 
 <br>
-Pandas is a software library written for the Python programming language for data manipulation and analysis. It is an open source package. It is built on top of another package named Numpy, which provides support for multi-dimensional arrays.
+It is built on top of another package named Numpy, which provides support for multi-dimensional arrays.
 
 <a name="Testing"></a>
 
