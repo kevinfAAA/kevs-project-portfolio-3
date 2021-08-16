@@ -98,8 +98,8 @@ if __name__ == "__main__":
         table.columns.header = ["Title", "Company", "Salary"]
         print(table)
 
-        print("")
-        print("See above for full iterable list!")
+        # print("")
+        # print("See above for full iterable list!")
 
-    print("")
-    print("Thanks for using my application to find your next job!")
+    # print("")
+    # print("Thanks for using my application to find your next job!")
