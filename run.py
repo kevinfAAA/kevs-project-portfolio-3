@@ -67,7 +67,7 @@ if __name__ == "__main__":
     print("")
 
 
-    # For loop to loop through the first three pages in a step of ten
+# For loop to loop through the first three pages in a step of ten
     for i in range(0, 40, 10):
         print(f"Getting page {i} ")
         content = extract(i, job_type, location)
@@ -88,18 +88,18 @@ if __name__ == "__main__":
         # initialise pretty table
         table = BeautifulTable()
         for job in joblist:
-            # Insert table rows        
+            # Insert table rows
             table.rows.append([
-                job.get("title"), 
-                job.get("company"), 
+                job.get("title"),
+                job.get("company"),
                 job.get("salary")
             ])
-            
+
         table.columns.header = ["Title", "Company", "Salary"]
         print(table)
 
         print("")
         print("See above for full iterable list!")
-    
+
     print("")
     print("Thanks for using my application to find your next job!")
