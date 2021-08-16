@@ -278,7 +278,6 @@ The Headings will be printed in the terminal while the data will be stored in th
 This program was deployed via Heroku. The following steps explain the deployment process:
 
 - Update the requirements file so Heroku recognises what modules are installed (my program depends on these modules to run).
-<br>
   To update the requirements file type: ```Pip3 freeze > requirements.txt``` into the terminal and the requirements file will update with your dependencies.
 
 - Open the Heroku account and click "create new app"
