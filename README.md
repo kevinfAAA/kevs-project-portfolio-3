@@ -50,7 +50,7 @@ This webscraper would be benefical for the recruitment industry and job seekers 
 
 When the program is run, the user will be asked two questions:   
 
-1. what job are you looking for?
+1. What job are you looking for?
 2. Where are you looking to work?
 
 The first question asks the user to input the job they are looking for, the program then adds that input to job title section in the URL. 
@@ -81,6 +81,15 @@ The list has four headings:
 The program will return information on each of the headings accept for the Salary heading on occasions where the salary is not posted by the company advertising.
 <br> 
 On occasions where the salary is not posted by the company the program will still post the heading followed by "Salary not available".
+<br>
+The program will also create a summary table with the headings "Title", "Company" and "Salary" which provides a nice format for the user to quickly inspect ouput.
+<br>
+If the user requests a job that is not available or a job in a location outside of ireland the program will inform the user:
+<br>
+"You searched for 'job type' in 'location'" 
+<br>
+"Sorry, no jobs found!"
+
 
 ## Walk Through
 
@@ -144,7 +153,20 @@ On occasions where the salary is not posted by the company the program will stil
 # 4. Bugs
 [Go to the top](#table-of-contents)
 
-- In the transform function, the except statement was throwing up an error saying *except* cannot be left bare. I then changed it to *except Exception as ex* which fixed the issue.
+- In the transform function, the except statement was throwing up an error saying ```except``` cannot be left bare. I then changed it to ```except Exception as ex``` which fixed the issue.
+- When I deployed my program to Heroku the program works as it's supposed to, but when I search for jobs that don't exist, the program returns:
+<br>
+"You searched for 'job type' in 'location'" 
+<br>
+"Sorry, no jobs found!" as expected.
+<br>
+When I then search again for a job such as python which I know is valid it returns the same:
+<br>
+"You searched for 'job type' in 'location'" 
+<br>
+"Sorry, no jobs found!" again.
+<br>
+This issue is only happening with Heroku, when I run it in the GitHub terminal it works as expected. Bug not fixed.
 - The User Agent URL in the extract function is throwing up an error saying the line is too long, I cannot resolve this issue.
 - When I first deployed my program to Heroku it would not run as the requests module did not load into the requiremnts table when I ran *Pip3 freeze > requirements.txt*.
 I added the requests module manually to the requirements file and deployed the program succesfully. 
@@ -166,19 +188,21 @@ This can be acheived by:
    2. Import the pandas module by writing *import pandas as pd* at the top of the run.py file underneath *from bs4 import BeautifulSoup*.
    3. Write the following comment and code at the bottom of the run file:
    <br>
-   *#Panda dataframe sends the scraped data to the jobs CSV file*
+
+
+   ```# Panda dataframe sends the scraped data to the jobs CSV file```
    <br>
-   *df = pd.DataFrame(joblist)*
+   ```df = pd.DataFrame(joblist)```
    <br>
-   *print(df.head())*
+   ```print(df.head())```
    <br>
-   *df.to_csv('jobs.csv')*
+   ```df.to_csv('jobs.csv')```
    <br>
    <br>
 
 3. Create a CSV file called "jobs" in the directory and run the program.
 <br>
-The Headings will be printed in the terminal will the data will be stored in the CSV.
+The Headings will be printed in the terminal while the data will be stored in the CSV.
 
 <a name="contribution-links"></a>
 
@@ -203,7 +227,7 @@ This program was deployed via Heroku. The following steps explain the deployment
 
 - Update your requirements file so Heroku recognises what modules are installed (What my program depends on to run).
 <br>
-  To update your requirements file type *Pip3 freeze > requirements.txt* into the terminal and your requirements file will update with your dependencies.
+  To update your requirements file type ```Pip3 freeze > requirements.txt``` into the terminal and your requirements file will update with your dependencies.
 
 - Open your Heroku account and click "create new app"
 - Click on the setting tab and then click on the "buildpack" button.
