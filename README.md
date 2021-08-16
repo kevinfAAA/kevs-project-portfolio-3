@@ -2,7 +2,7 @@
 
 ## Description: Code Institute Student Project 3: 
 
-A program that successfully scrapes job information from the indeed.com website 
+A program that successfully scrapes job information from the indeed.ie website 
 It showcases my python ability.
 
 A live program can be found [here](https://kevs-project-portfolio-3.herokuapp.com/).
@@ -98,9 +98,14 @@ I used the [PEP8 online](http://pep8online.com/) validator to check my code for 
 
 #### Errors Found:
 
-Code: E501	Line: 11	Column: 80	Error Description: line too long (139 > 79 characters)
+1. Code: E501	Line: 12	Column: 80	Error Description: line too long (139 > 79 characters)
 <br>
 Unable to fix error as this is my User-Agent string.
+
+2. Code: E501	Line: 52	Column: 80	Error Description: line too long (87 > 79 characters)
+<br>
+Unable to fix error as this is a note to help the user.
+
 
 ## Manual Testing
 

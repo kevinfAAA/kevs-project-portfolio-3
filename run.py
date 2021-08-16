@@ -49,7 +49,7 @@ def transform(content):
 # User inputs to find specific Jobs and locations
 if __name__ == "__main__":
     print("What job are you looking for?")
-    print("Note: You may look for standard job such as developer, chef, builder, etc.")
+    print("Note: You may look for standard job such as developer, chef, plumber, etc.")
     job_type = ""
     while not job_type:
         job_type = input("")
