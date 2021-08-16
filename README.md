@@ -2,7 +2,7 @@
 
 ## Description: Code Institute Student Project 3: 
 
-A program that successfully scrapes job information from the indeed.ie website 
+A program that successfully scrapes job information from the indeed.com website 
 It showcases my python ability.
 
 A live program can be found [here](https://kevs-project-portfolio-3.herokuapp.com/).
@@ -27,13 +27,21 @@ A live program can be found [here](https://kevs-project-portfolio-3.herokuapp.co
 This is the first python program I have built and is part of my project portfolio required in the Full-Stack Software Development Diploma I am currently undertaking.
 The aim of this program is to scrape job information from the indeed.com website:
 - The program should allow the user to input the type of job they are looking for and the location they would like that job to be in.
+- It must be noted that the locaction must be in Ireland.
 - The program should scrape the following information:
     1. The Job Title.
     2. The name of the Company that are hiring for the job.
     3. The Salary being offered for the job if available.
     4. A Summary giving a description of the role on offer.
-- The first five job heading will be sent to terminal to show that the program run successfully.
-- The program will send the scraped data of the first five pages of the Indeed website and populate the jobs.csv file with it for analysis by the user.
+- All information will be outputted to the terminal and the "Title", "Company" and "Salary" will also be put into a table.
+
+## Purpose
+
+The pupose of this webscraper is to allow the user to have quick accessability to job data for a specific job type in Ireland.
+<br>
+It allows to user to group the "Title", "Company" and "Salary" in a summary table for anlized.
+<br>
+This webscraper would be benefical for the recruitment industry and job seekers as it outputs useful data with reletive speed.
 
 <a name="How-to-use"></a>
 
